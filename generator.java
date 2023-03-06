@@ -16,9 +16,18 @@ public class generator {
         int m2 = Integer.parseInt(JOptionPane.showInputDialog("1-Generuje haslo, 2-Generuje pin"));
         int m = Integer.parseInt(JOptionPane.showInputDialog("Ile znaków ma mieć hasło?"));
         if (m2 == 1) {
-            haslo(m);
+            if (m < 4) {
+                System.out.println("Haslo musi miec co najmniej 4 znaki");
+            } else {
+                haslo(m);
+            }
+
         } else if (m2 == 2) {
-            pin(m);
+            if (m < 4) {
+                System.out.println("Haslo musi miec co najmniej 4 znaki");
+            } else {
+                pin(m);
+            }
         } else {
             System.out.println("Wybierz 1 albo 2");
         }
